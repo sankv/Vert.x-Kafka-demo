@@ -7,17 +7,17 @@ import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.Json;
 import sankv.kafka.poc.bus.Messages;
 import sankv.kafka.poc.model.SimpleMessage;
-import sankv.kafka.poc.publisher.KafkaPublisher;
+import sankv.kafka.poc.publisher.KafkaMessagePublisher;
 
 public class KafkaPublisherVerticle extends AbstractVerticle {
 
     private Config config;
 
-    private KafkaPublisher kafkaPublisher;
+    private KafkaMessagePublisher kafkaPublisher;
 
     private EventBus eventBus;
 
-    public KafkaPublisherVerticle(Config config, KafkaPublisher kafkaPublisher) {
+    public KafkaPublisherVerticle(Config config, KafkaMessagePublisher kafkaPublisher) {
         this.config = config;
         this.kafkaPublisher = kafkaPublisher;
     }

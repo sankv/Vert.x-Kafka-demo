@@ -24,7 +24,7 @@ public class SimpleMessage {
 
     @Override
     public String toString() {
-        return "SimpleMessage{" +
+        return "{" +
                 "id='" + id + '\'' +
                 ", msg='" + msg + '\'' +
                 '}';

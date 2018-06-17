@@ -2,7 +2,7 @@ package sankv.kafka.poc.publisher;
 
 import sankv.kafka.poc.model.SimpleMessage;
 
-public interface KafkaPublisher {
+public interface KafkaMessagePublisher {
 
     void publish(SimpleMessage simpleMessage);
 

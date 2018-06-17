@@ -1,6 +1,6 @@
 package sankv.kafka.poc.constants;
 
-public class Vertx {
+public final class Vertx {
 
     public static final String PORT = "vertx.port";
 
