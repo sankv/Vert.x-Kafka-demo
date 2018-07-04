@@ -35,12 +35,15 @@ public class Consumer {
 
     private KafkaConsumer<String, String> createKafkaConsumer() {
         Properties config = new Properties();
+
         config.put(BOOTSTRAP_SERVERS_CONFIG, kafkaConfig.getString(BOOTSTRAP_SERVERS_CONFIG));
         config.put(KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(GROUP_ID_CONFIG, kafkaConfig.getString(GROUP_ID_CONFIG));
         config.put(AUTO_OFFSET_RESET_CONFIG, kafkaConfig.getString(AUTO_OFFSET_RESET_CONFIG));
+
         config.put(ENABLE_AUTO_COMMIT_CONFIG, kafkaConfig.getString(ENABLE_AUTO_COMMIT_CONFIG));
+        config.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, kafkaConfig.getString(AUTO_COMMIT_INTERVAL_MS_CONFIG));
 
         return KafkaConsumer.create(vertx, config);
     }
